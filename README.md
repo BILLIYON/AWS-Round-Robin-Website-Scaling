@@ -125,52 +125,53 @@ ________________________________________
 ### 6.1 E-Commerce Platforms
 -	**Scenario**: Hosting an online store that experiences fluctuating traffic during events like Black Friday sales.
 -	**Why**: Auto Scaling ensures servers can handle sudden spikes in demand, while the Load Balancer maintains even distribution of traffic.
--	Link to customization and optimization 
+-	[Link to customization and optimization](Use-Cases/E-Commerce.md) 
 
 ### 6.2 Content Delivery Networks (CDNs)
 -	**Scenario**: Serving static and dynamic content, such as videos or images, to a global audience.
 -	**Why**: The architecture supports secure, scalable, and low-latency delivery of content via distributed backend servers.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/CDNs.md) 
 
 ### 6.3 SaaS Applications
 -	**Scenario**: Running a software-as-a-service (SaaS) product requiring 24/7 uptime and a secure backend for sensitive data.
 -	**Why**: The use of private subnets and NAT Gateways ensures secure operations, while Route 53 and the ALB manage seamless access.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/SaaS.md) 
 
 ### 6.4 Financial Services
 -	**Scenario**: Hosting secure financial transaction systems or trading platforms.
 -	**Why**: High availability, security (private subnets), and TLS encryption provide the reliability and safety necessary for handling sensitive financial data.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/Financial-Services.md) 
 
 ### 6.5 Online Education Platforms
 -	**Scenario**: Supporting an online learning management system (LMS) that experiences increased demand during peak hours or exam seasons.
 -	**Why**: Auto Scaling accommodates traffic surges, while SSL/TLS certificates ensure data security for students and educators.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/Education-LMS.md) 
 
 ### 6.6 Government Portals
 -	**Scenario**: Managing a public service portal that provides citizens access to services like tax filing, licensing, or voting systems.
 -	**Why**: The architecture supports secure data access, high availability, and reliable scaling for user traffic during deadlines.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/Government-Portals.md) 
 
 ### 6.7 Healthcare Systems
 -	**Scenario**: Deploying Electronic Health Record (EHR) systems with strict data security and uptime requirements.
 -	**Why**: The architecture isolates sensitive patient data within private subnets and ensures compliance with regulatory requirements like HIPAA.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/Healthcare-Systems.md) 
 
 ### 6.8 Media and Entertainment
 -	**Scenario**: Hosting a video streaming service that adjusts to user demand during premieres or live events.
 -	**Why**: Load Balancing ensures smooth streaming experiences, while Auto Scaling optimizes costs by adjusting resources dynamically.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/Media.md) 
 
 ### 6.9 IoT Platforms
 -	**Scenario**: Managing an IoT backend for real-time device data processing and analytics.
 -	Why: The scalable architecture ensures high performance and availability for millions of simultaneous device connections.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/IoT.md) 
 
 ### 6.10 AI/ML Workflows
 -	**Scenario**: Serving APIs for machine learning models deployed in production environments.
 -	**Why**: The architecture supports secure hosting of APIs and scales to handle variable inference loads, ensuring fast and reliable model predictions.
--	Link to customization and optimization
+-	[Link to customization and optimization](Use-Cases/AI.md) 
+
 ________________________________________
 ## 7. Conclusion
 This project demonstrates how to build a resilient, secure, and scalable web application using AWS. Key aspects include routing via Route 53, traffic distribution through ALB in a round-robin fashion, and secure resource access with a Bastion Host.
