@@ -14,7 +14,9 @@ This project demonstrates how I created a VPC that I used for servers in a produ
 ________________________________________
 ## 2. Architecture Diagram
 The following diagram provides an overview of the resources included in this project. The VPC has public subnets and private subnets in two Availability Zones. Each public subnet contains a NAT gateway and a load balancer node. The servers run in the private subnets, are launched and terminated by using an Auto Scaling group, and receive traffic from the load balancer. The servers can connect to the internet by using the NAT gateway.
- 
+
+![image](https://github.com/user-attachments/assets/cecf4069-151f-423f-9d4f-c9d24908fbe2)
+
 ________________________________________
 ## 3. Key Components
 ### 3.1 VPC Configuration
@@ -46,25 +48,34 @@ ________________________________________
 -	Navigate to the VPC console.
 -	Create a VPC with public and private subnets.
 -	Configure Route Tables and attach NAT Gateways for internet access.
- 
+
+ ![image](https://github.com/user-attachments/assets/60ec2db0-a556-4faa-9848-6bf95c17cce9)
+
 
 #### **Step 2: Setup the Auto Scaling Group**
 -	Create a Launch Template specifying instance type, AMI, and key pair.
+
+![image](https://github.com/user-attachments/assets/e8fb98a8-ee63-4e17-a946-a86274a23138)
  
 -	Define the Auto Scaling Group, associating it with private subnets.
- 
+
+ ![image](https://github.com/user-attachments/assets/990a9ef3-97bb-49da-88dd-5ceb92890db8)
 
 #### **Step 3: Create a Bastion Host**
 -	Launch an EC2 instance in a public subnet.
 -	Configure the security group to allow inbound SSH on port 22.
  
+![image](https://github.com/user-attachments/assets/6dc1be2a-8981-447c-8d15-1e879c3d950a)
 
 #### **Step 4: Deploy Backend Servers**
 -	SSH into the Bastion Host.
- 
+
+ ![image](https://github.com/user-attachments/assets/efe41141-6f12-45e4-894f-1712100457de)
+
 -	Securely transfer private keys to the host using SCP.
 -	SSH into backend instances via the Bastion Host.
  
+![image](https://github.com/user-attachments/assets/0a849594-0387-42b8-96f7-31e5eca86979)
 
 #### **Step 5: Configure Web Servers**
 -	Create an HTML file and host it using Python's built-in HTTP server.
@@ -76,23 +87,27 @@ ________________________________________
   sudo systemctl start apache2  
   ```
 
- 
+![image](https://github.com/user-attachments/assets/6dd6d7ba-c07c-4caf-b51e-fcfed879fbcb) 
 
 #### **Step 6: Setup the Load Balancer**
 -	Create a target group pointing to backend servers.
 -	Attach the target group to an ALB configured within the VPC.
  
+![image](https://github.com/user-attachments/assets/9f1e3d84-d874-4a24-a1c6-ff0cb463f3e4)
 
 #### **Step 7: Configure Route 53**
 -	Register or purchase a domain name.
 -	Point the domain's DNS records to the ALB using alias records.
  
+![image](https://github.com/user-attachments/assets/2491a418-097a-475b-aaa5-ff73d95f667b)
 
 #### **Step 8: Secure the Website**
 -	Request an SSL/TLS certificate via AWS Certificate Manager.
 -	Attach the certificate to the Load Balancer.
  
+![image](https://github.com/user-attachments/assets/ef45266b-4711-4817-a34b-70633c7914ca)
 
+![image](https://github.com/user-attachments/assets/ccdb8962-443e-4b37-8965-d8343663740f)
  
 ________________________________________
 ## 5. Challenges and Solutions
